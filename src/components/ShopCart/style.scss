@@ -1,0 +1,158 @@
+.height-wrapper {
+  height: 100%;
+}
+
+.card-dish {
+  .delete-img-wrapper {
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .card-dish__delete-img {
+    padding-top: 5px;
+    padding-right: 5px;
+  }
+
+  &__total {
+    margin-left: 30px;
+  }
+
+  &__count {
+    margin-left: 10px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__sumForDish {
+    margin-left: 30px;
+  }
+
+  .dish {
+    padding: 10px;
+    display: flex;
+    background-color: #fff;
+    width: 60%;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      #pyat::-webkit-inner-spin-button {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.header-order {
+  padding: 0 50px 50px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .order {
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(19, 179, 139);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px black;
+      background-color: #b8bf95;
+    }
+  }
+
+  .total-sum {
+    display: flex;
+    gap: 10px;
+  }
+
+  .close-img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .btn-close {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(204, 128, 29);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 5px black;
+      background-color: #b8bf95;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-dish {
+    &__total {
+      margin-left: 5px;
+    }
+
+    &__sumForDish {
+      margin-left: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card-dish {
+    &__total {
+      font-size: 10px;
+    }
+
+    &__sumForDish {
+      font-size: 10px;
+    }
+  }
+
+  .header-order .order {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .dish-wrapper {
+    .card-dish {
+      .dish {
+        padding-bottom: 0;
+        width: auto;
+      }
+
+      .price-wrapper {
+        flex-direction: row;
+      }
+
+      .delete-img-wrapper {
+        border-radius: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .header-order {
+    gap: 10px;
+
+    .order {
+      text-align: center;
+    }
+
+    .btn-close {
+      text-align: center;
+    }
+  }
+}
